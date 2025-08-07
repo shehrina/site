@@ -1,0 +1,211 @@
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at center, #EAD7FF, #FFDCDD);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #5c4033;
+}
+
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+}
+
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 5rem 4rem;
+  gap: 4rem;
+  min-height: 80vh;
+}
+
+
+
+.illustration img {
+  max-width: 340px;
+  height: auto;
+}
+
+
+.intro {
+  flex: 1; /* allow it to stretch and take available space */
+  max-width: none; /* remove the width cap */
+  font-size: 1.25rem; /* slightly bigger font */
+  line-height: 1.9; /* more breathing room */
+  padding-right: 3rem; /* prevents it from hugging the edge */
+}
+
+.intro h1 {
+  font-family: 'Alfa Slab One', serif;
+  color: #5c4033;
+}
+
+.intro p {
+  margin-bottom: 1rem;
+}
+
+.button {
+  display: inline-block;
+  background: #fdaecb;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.portfolio {
+  text-align: center;
+  padding: 3rem 2rem;
+  min-height: 80vh;
+}
+
+.portfolio h1 {
+  font-family: 'Alfa Slab One', serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #5c4033;
+}
+
+.portfolio p {
+  max-width: 600px;
+  margin: 1rem auto 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.portfolio-grid img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 4px solid #f9c2d3;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+
+.portfolio-grid img:hover {
+  transform: scale(1.03);
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1rem 4rem; /* top, sides, bottom */
+  margin-top: 2rem; /* pushes it off nav, not too far */
+  min-height: 80vh;
+}
+
+
+.contact-section h1 {
+  font-family: 'Alfa Slab One', serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #5c4033;
+  margin-bottom: 1rem;
+}
+
+.contact-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.signoff {
+  font-style: italic;
+  font-size: 1rem;
+  color: #444;
+}
+
+.typewriter {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 3rem;
+    color: #5c4033;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid #5c4033;
+    width: 0;
+    animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 50%; }
+}
+
+@keyframes blink {
+  from, to { 
+      border-color: transparent 
+  }
+  50% { 
+      border-color: #fdaecb; 
+  }
+}
+
+a {
+  color: #DB5079;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #ff87b0;
+}
