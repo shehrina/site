@@ -36,5 +36,24 @@
       <a href="https://drive.google.com/file/d/1plP3ImeN8hC3nzmXMXX7LrEAjtGp7hf9/view?usp=sharing" class="button" target="_blank" >resume</a>
     </div>
   </main>
+  <script>
+    (function () {
+      const el = document.querySelector('.typewriter');
+      if (!el) return;
+
+      function start() { el.classList.add('start'); }
+
+      if (document.fonts && document.fonts.load) {
+        Promise.all([
+          document.fonts.load('1em "Alfa Slab One"'),
+          document.fonts.ready
+        ]).then(start, start);
+      } else if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(start);
+      } else {
+        window.addEventListener('load', start);
+      }
+    })();
+  </script>
 </body>
 </html>
