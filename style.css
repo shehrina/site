@@ -230,3 +230,14 @@ a:hover {
     font-size: 1.6rem;
   }
 }
+
+body.portfolio-page {
+  background: radial-gradient(circle at center, #FFACAC, #CED7FF);
+}
+
+body.contact-page {
+  background: conic-gradient( from 0deg,
+    #FFB8BA 19%,
+    #FFE6B7 68%,
+    #FFB8BA 100%);
+}
