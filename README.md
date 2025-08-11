@@ -1,7 +1,3 @@
-# shehrinahossain.com 💻✨
-
-Welcome to the source code for my personal website: [shehrinahossain.com](https://shehrinahossain.com)!
-
 ## 🖥️ About the Site
 
 - Prototyped with **Figma**
@@ -9,4 +5,4 @@ Welcome to the source code for my personal website: [shehrinahossain.com](https:
 - Fully responsive across desktop and mobile devices
 - Custom typewriter effect, pastel/aura-based color palette, and illustration-based layout
 - Deployed via **GitHub Pages**
-- Live at [shehrinahossain.com](https://shehrinahossain.com) with a custom domain
+- Live at [shehrina.com](https://shehrina.com) with a custom domain
