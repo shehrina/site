@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="title">
+  <title id="title">League logo</title>
+  <rect width="200" height="200" fill="#24104f"/>
+  <path fill="#fff" d="M85 48h29v40h38v28H85z"/>
+  <rect x="47" y="86" width="29" height="29" fill="#00c7a5"/>
+  <rect x="85" y="124" width="29" height="29" fill="#00c7a5"/>
+</svg>

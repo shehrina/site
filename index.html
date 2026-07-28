@@ -3,56 +3,300 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shehrina Hossain</title>
-  <link rel="icon" href="images/pinkcomputer.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title>shehrina hossain</title>
+  <link rel="icon" href="images/luma-favicon.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <nav>
-    <a href="/">
-    <img src="images/myname.png" alt="Shehrina Hossain Logo" class="logo" />
-    </a>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+<body class="home-page">
+  <div class="aura-background" aria-hidden="true">
+    <span class="aura-blob aura-blob-pink"></span>
+    <span class="aura-blob aura-blob-blue"></span>
+    <span class="aura-blob aura-blob-purple"></span>
+    <span class="aura-blob aura-blob-green"></span>
+  </div>
+
+  <section class="landing" aria-labelledby="landing-title">
+    <h1 id="landing-title">
+      <button class="confetti-trigger" type="button" aria-label="Celebrate Shehrina Hossain">
+        shehrina hossain
+      </button>
+    </h1>
+    <nav class="landing-nav" aria-label="Primary navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://drive.google.com/file/d/1C0K9OuxhT_9Ye6HOLAsBTd981e_efUW0/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></li>
+      </ul>
+    </nav>
+  </section>
 
   <main class="hero">
-    <div class="illustration">
-      <img src="images/cartoonme2.png" alt="Shehrina with cat" />
+    <div class="profile-aside">
+      <div class="illustration">
+        <img src="images/cartoonme2.png" alt="Shehrina with cat" />
+        <button class="cat-hotspot" type="button" aria-label="Make the cat meow" title="pet the cat">
+          <span class="visually-hidden">make the cat meow</span>
+        </button>
+        <span class="cat-meow-bubble" aria-hidden="true">meow!</span>
+      </div>
     </div>
+
     <div class="intro">
-      <div class="typewriter">hi, nice to meet you! :)</div>
+      <section class="intro-section intro-about" id="about">
+        <h2>about me</h2>
+        <p>i’m a cs & se student focused on and backend systems & infrastructure, with a growing interest in ai and machine learning. i enjoy building reliable, thoughtful software and connecting with people working on interesting problems.</p>
+      </section>
 
-      <p>my name is <strong>shehrina hossain</strong> and i’m currently a fourth year student @ western university (rollll stangs 🤟) completing my honours bsc in computer science w/ a minor in software engineering! i'm an <strong>incoming summer 2026 software engineering intern @ <a href="https://www.confluent.io/confluent-cloud/kora/" target="_blank">confluent</a>, </strong> joining the kafka - kora orchestration team. in the past, i was a <strong>cloud platform engineer intern @ <a href="https://www.league.com" target="_blank">league</a> </strong> (summer 2025), working w/ tools like terraform, gcp, aws, and python, and i did an <strong>8-month software engineering internship @ <a href="https://globalwealth.scotiabank.com/en/home.html" target="_blank">scotiabank</a> </strong> (sept 2025 – april 2026), working within the global wealth management team. i love all things cloud & backend, and have a current growing interest in ai & ml.</p>
+      <div class="professional-grid">
+        <section class="intro-section work-section">
+          <h2>work</h2>
+          <ul class="experience-list">
+          <li>
+            <span class="experience-date">sept — dec 2026</span>
+            <a class="experience-logo-link" href="https://mercury.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Mercury">
+              <img class="experience-logo" src="images/work-logos/mercury.png" alt="Mercury logo" />
+            </a>
+            <div>
+              <strong>incoming software engineering intern</strong>
+              <a href="https://mercury.com/" target="_blank" rel="noopener noreferrer">@mercury</a>
+              <p>investments</p>
+            </div>
+          </li>
+          <li>
+            <span class="experience-date">may — august 2026</span>
+            <a class="experience-logo-link" href="https://www.confluent.io/confluent-cloud/kora/" target="_blank" rel="noopener noreferrer" aria-label="Visit Confluent Kora">
+              <img class="experience-logo" src="images/work-logos/confluent.jpeg" alt="Confluent logo" />
+            </a>
+            <div>
+              <strong>software engineering intern</strong>
+              <a href="https://www.confluent.io/confluent-cloud/kora/" target="_blank" rel="noopener noreferrer">@confluent</a>
+              <p>kafka — kora orchestration</p>
+            </div>
+          </li>
+          <li>
+            <span class="experience-date">sept 2025 — apr 2026</span>
+            <a class="experience-logo-link" href="https://globalwealth.scotiabank.com/en/home.html" target="_blank" rel="noopener noreferrer" aria-label="Visit Scotiabank Global Wealth Management">
+              <img class="experience-logo" src="images/work-logos/scotiabank.png" alt="Scotiabank logo" />
+            </a>
+            <div>
+              <strong>software engineering intern</strong>
+              <a href="https://globalwealth.scotiabank.com/en/home.html" target="_blank" rel="noopener noreferrer">@scotiabank</a>
+              <p>global wealth management</p>
+            </div>
+          </li>
+          <li>
+            <span class="experience-date">may — august 2025</span>
+            <a class="experience-logo-link" href="https://www.league.com" target="_blank" rel="noopener noreferrer" aria-label="Visit League">
+              <img class="experience-logo" src="images/work-logos/league-logo.svg" alt="League logo" />
+            </a>
+            <div>
+              <strong>cloud platform engineer intern</strong>
+              <a href="https://www.league.com" target="_blank" rel="noopener noreferrer">@league</a>
+              <p>terraform, gcp, aws, and python</p>
+            </div>
+          </li>
+          </ul>
+        </section>
 
-      <p>aside from working and coding, some of my favourite things are cats, salmon sashimi, and stardew valley.</p>
+        <div class="professional-side">
+          <section class="intro-section">
+            <h2>education</h2>
+            <div class="education-entry">
+              <span class="experience-date">sept 2022 — june 2027</span>
+              <div>
+                <strong>western university</strong>
+                <span>honours bsc in computer science, minor in software engineering</span>
+                <p>london, ontario (canada not uk)</p>
+              </div>
+            </div>
+          </section>
 
-      <p>for more info about me, feel free to look through my resume and some of my portfolio! my contact info can also be found on this site, i’m always open to chatting about new opportunities :)</p>
-      <!-- Copy your paragraph content here -->
-      <a href="https://drive.google.com/file/d/1C0K9OuxhT_9Ye6HOLAsBTd981e_efUW0/view?usp=sharing" class="button" target="_blank" >resume</a>
+          <section class="intro-section">
+            <h2>current hyperfixations</h2>
+            <p class="hyperfixation-text">the odyssey, thai milk tea, & mr. robot</p>
+          </section>
+        </div>
+      </div>
     </div>
   </main>
+
+  <section class="portfolio home-portfolio" id="portfolio" aria-labelledby="home-portfolio-title">
+    <h1 id="home-portfolio-title">portfolio photo booth ↓</h1>
+    <p>
+      a few projects i’ve created in the past. tap any screenshot to visit its
+      <a href="https://github.com/shehrina" target="_blank" rel="noopener noreferrer">github</a>
+      or
+      <a href="https://devpost.com/shehrina23" target="_blank" rel="noopener noreferrer">devpost</a>
+      page.
+    </p>
+    <p class="scrapbook-hint" aria-hidden="true">swipe or scroll through the projects →</p>
+
+    <div class="portfolio-grid">
+      <a href="https://devpost.com/software/my-auntie" target="_blank" rel="noopener noreferrer">
+        <img src="images/myauntie.png" alt="MyAuntie project screenshot" />
+      </a>
+      <a href="https://devpost.com/software/factorthree" target="_blank" rel="noopener noreferrer">
+        <img src="images/factor3.png" alt="Factor3 project screenshot" />
+      </a>
+      <a href="https://github.com/shehrina/Upright" target="_blank" rel="noopener noreferrer">
+        <img src="images/upright.png" alt="Upright project screenshot" />
+      </a>
+      <a href="https://github.com/shehrina/Coinquest" target="_blank" rel="noopener noreferrer">
+        <img src="images/coinquest.png" alt="CoinQuest project screenshot" />
+      </a>
+      <a href="https://github.com/shehrina/khushu" target="_blank" rel="noopener noreferrer">
+        <img src="images/khushu.png" alt="Khushu project screenshot" />
+      </a>
+      <a href="https://github.com/shehrina/PlayMatch" target="_blank" rel="noopener noreferrer">
+        <img src="images/playmatch (1) (1).png" alt="PlayMatch project screenshot" />
+      </a>
+      <a href="https://github.com/shehrina/talk-to-the-hand" target="_blank" rel="noopener noreferrer">
+        <img src="images/talktothehand.png" alt="TalkToTheHand project screenshot" />
+      </a>
+      <a href="https://github.com/shehrina/NumberNinjas" target="_blank" rel="noopener noreferrer">
+        <img src="images/nummm (1).png" alt="NumberNinjas project screenshot" />
+      </a>
+    </div>
+  </section>
+
+  <section class="contact-section home-contact" id="contact" aria-labelledby="home-contact-title">
+    <h1 id="home-contact-title">contact info:</h1>
+    <p>
+      toronto, on<br>
+      shehrina23@gmail.com<br>
+      shossa67@uwo.ca
+    </p>
+
+    <div class="social-icons">
+      <a href="https://github.com/shehrina" target="_blank" rel="noopener noreferrer">
+        <img src="images/github.png" alt="GitHub" />
+      </a>
+      <a href="https://linkedin.com/in/shehrinahossain" target="_blank" rel="noopener noreferrer">
+        <img src="images/linkedin5.png" alt="LinkedIn" />
+      </a>
+    </div>
+
+    <p class="signoff">thanks for coming by, and have an amazing day ^v^</p>
+  </section>
+
   <script>
     (function () {
-      const el = document.querySelector('.typewriter');
-      if (!el) return;
+      const nav = document.querySelector('.landing-nav');
+      if (!nav) return;
 
-      function start() { el.classList.add('start'); }
+      let navTop = 0;
 
-      if (document.fonts && document.fonts.load) {
-        Promise.all([
-          document.fonts.load('1em "Alfa Slab One"'),
-          document.fonts.ready
-        ]).then(start, start);
-      } else if (document.fonts && document.fonts.ready) {
-        document.fonts.ready.then(start);
-      } else {
-        window.addEventListener('load', start);
+      function updateNav() {
+        nav.classList.toggle('is-fixed', window.scrollY >= navTop - 16);
       }
+
+      function measureNav() {
+        nav.classList.remove('is-fixed');
+        navTop = nav.getBoundingClientRect().top + window.scrollY;
+        updateNav();
+      }
+
+      window.addEventListener('scroll', updateNav, { passive: true });
+      window.addEventListener('resize', measureNav);
+      window.addEventListener('load', measureNav);
+      measureNav();
+    })();
+  </script>
+  <script>
+    (function () {
+      const trigger = document.querySelector('.confetti-trigger');
+      if (!trigger) return;
+
+      const colors = ['#ffd6e7', '#cfe5ff', '#e4d6ff', '#d8f3dc'];
+      const confettiSound = new Audio('audio/confetti.wav');
+      confettiSound.preload = 'auto';
+      confettiSound.volume = 0.65;
+
+      trigger.addEventListener('click', function (event) {
+        confettiSound.pause();
+        confettiSound.currentTime = 0;
+        confettiSound.play().catch(function () {
+          // Some browsers may block audio until the page receives interaction.
+        });
+
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        const rect = trigger.getBoundingClientRect();
+        const originX = event.clientX || rect.left + rect.width / 2;
+        const originY = event.clientY || rect.top + rect.height / 2;
+        const burst = document.createElement('div');
+
+        burst.className = 'confetti-burst';
+        burst.style.left = originX + 'px';
+        burst.style.top = originY + 'px';
+        document.body.appendChild(burst);
+
+        for (let i = 0; i < 42; i += 1) {
+          const piece = document.createElement('span');
+          const angle = Math.random() * Math.PI * 2;
+          const distance = 90 + Math.random() * 170;
+
+          piece.className = 'confetti-piece';
+          piece.style.background = colors[i % colors.length];
+          piece.style.setProperty('--x', Math.cos(angle) * distance + 'px');
+          piece.style.setProperty('--y', Math.sin(angle) * distance + 'px');
+          piece.style.setProperty('--rotation', Math.random() * 720 - 360 + 'deg');
+          piece.style.setProperty('--delay', Math.random() * 80 + 'ms');
+          burst.appendChild(piece);
+        }
+
+        window.setTimeout(function () {
+          burst.remove();
+        }, 1100);
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      const cat = document.querySelector('.cat-hotspot');
+      if (!cat) return;
+
+      const meows = [
+        new Audio('audio/cat-attention.wav'),
+        new Audio('audio/cat-sweet.wav'),
+        new Audio('audio/cat-angry.wav')
+      ];
+      let lastMeow = -1;
+
+      meows.forEach(function (sound) {
+        sound.preload = 'auto';
+        sound.volume = 0.7;
+      });
+
+      function meow() {
+        let nextMeow;
+
+        do {
+          nextMeow = Math.floor(Math.random() * meows.length);
+        } while (nextMeow === lastMeow);
+
+        meows.forEach(function (sound) {
+          sound.pause();
+          sound.currentTime = 0;
+        });
+
+        lastMeow = nextMeow;
+        meows[nextMeow].play().catch(function () {
+          // Some browsers may block audio until the page receives interaction.
+        });
+      }
+
+      cat.addEventListener('click', function () {
+        meow();
+        cat.classList.remove('is-meowing');
+        void cat.offsetWidth;
+        cat.classList.add('is-meowing');
+        window.setTimeout(function () {
+          cat.classList.remove('is-meowing');
+        }, 700);
+      });
     })();
   </script>
 </body>
