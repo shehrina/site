@@ -582,6 +582,55 @@ nav ul li a {
   color: rgba(92, 64, 51, 0.66);
 }
 
+.portfolio-carousel {
+  position: relative;
+}
+
+.carousel-arrow {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  width: 2.9rem;
+  height: 2.9rem;
+  padding: 0 0 0.15rem;
+  border: 1px solid rgba(92, 64, 51, 0.14);
+  border-radius: 50%;
+  background: rgba(255, 251, 253, 0.88);
+  color: #5c4033;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+  box-shadow: 0 0.6rem 1.5rem rgba(92, 64, 51, 0.13);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: transform 160ms ease, opacity 160ms ease, background 160ms ease;
+}
+
+.carousel-arrow:hover:not(:disabled) {
+  background: rgba(255, 214, 231, 0.94);
+  transform: translateY(-50%) scale(1.07);
+}
+
+.carousel-arrow:focus-visible {
+  outline: 2px solid rgba(92, 64, 51, 0.58);
+  outline-offset: 0.2rem;
+}
+
+.carousel-arrow:disabled {
+  opacity: 0.28;
+  cursor: default;
+}
+
+.carousel-arrow-prev {
+  left: 0.45rem;
+}
+
+.carousel-arrow-next {
+  right: 0.45rem;
+}
+
 .home-portfolio .portfolio-grid {
   display: flex;
   justify-content: flex-start;

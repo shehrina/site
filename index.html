@@ -46,12 +46,12 @@
     <div class="intro">
       <section class="intro-section intro-about" id="about">
         <h2>about me</h2>
-        <p>i’m a cs & se student focused on and backend systems & infrastructure, with a growing interest in ai and machine learning. i enjoy building reliable, thoughtful software and connecting with people working on interesting problems.</p>
+        <p>i’m a cs & se student focused on backend systems & infrastructure, with a growing interest in ai and machine learning. i enjoy building reliable, thoughtful software and connecting with people working on interesting problems.</p>
       </section>
 
       <div class="professional-grid">
         <section class="intro-section work-section">
-          <h2>work</h2>
+          <h2>work experience</h2>
           <ul class="experience-list">
           <li>
             <span class="experience-date">sept — dec 2026</span>
@@ -133,31 +133,35 @@
     </p>
     <p class="scrapbook-hint" aria-hidden="true">swipe or scroll through the projects →</p>
 
-    <div class="portfolio-grid">
-      <a href="https://devpost.com/software/my-auntie" target="_blank" rel="noopener noreferrer">
-        <img src="images/myauntie.png" alt="MyAuntie project screenshot" />
-      </a>
-      <a href="https://devpost.com/software/factorthree" target="_blank" rel="noopener noreferrer">
-        <img src="images/factor3.png" alt="Factor3 project screenshot" />
-      </a>
-      <a href="https://github.com/shehrina/Upright" target="_blank" rel="noopener noreferrer">
-        <img src="images/upright.png" alt="Upright project screenshot" />
-      </a>
-      <a href="https://github.com/shehrina/Coinquest" target="_blank" rel="noopener noreferrer">
-        <img src="images/coinquest.png" alt="CoinQuest project screenshot" />
-      </a>
-      <a href="https://github.com/shehrina/khushu" target="_blank" rel="noopener noreferrer">
-        <img src="images/khushu.png" alt="Khushu project screenshot" />
-      </a>
-      <a href="https://github.com/shehrina/PlayMatch" target="_blank" rel="noopener noreferrer">
-        <img src="images/playmatch (1) (1).png" alt="PlayMatch project screenshot" />
-      </a>
-      <a href="https://github.com/shehrina/talk-to-the-hand" target="_blank" rel="noopener noreferrer">
-        <img src="images/talktothehand.png" alt="TalkToTheHand project screenshot" />
-      </a>
-      <a href="https://github.com/shehrina/NumberNinjas" target="_blank" rel="noopener noreferrer">
-        <img src="images/nummm (1).png" alt="NumberNinjas project screenshot" />
-      </a>
+    <div class="portfolio-carousel">
+      <button class="carousel-arrow carousel-arrow-prev" type="button" aria-label="Show previous projects">‹</button>
+      <div class="portfolio-grid">
+        <a href="https://devpost.com/software/my-auntie" target="_blank" rel="noopener noreferrer">
+          <img src="images/myauntie.png" alt="MyAuntie project screenshot" />
+        </a>
+        <a href="https://devpost.com/software/factorthree" target="_blank" rel="noopener noreferrer">
+          <img src="images/factor3.png" alt="Factor3 project screenshot" />
+        </a>
+        <a href="https://github.com/shehrina/Upright" target="_blank" rel="noopener noreferrer">
+          <img src="images/upright.png" alt="Upright project screenshot" />
+        </a>
+        <a href="https://github.com/shehrina/Coinquest" target="_blank" rel="noopener noreferrer">
+          <img src="images/coinquest.png" alt="CoinQuest project screenshot" />
+        </a>
+        <a href="https://github.com/shehrina/khushu" target="_blank" rel="noopener noreferrer">
+          <img src="images/khushu.png" alt="Khushu project screenshot" />
+        </a>
+        <a href="https://github.com/shehrina/PlayMatch" target="_blank" rel="noopener noreferrer">
+          <img src="images/playmatch (1) (1).png" alt="PlayMatch project screenshot" />
+        </a>
+        <a href="https://github.com/shehrina/talk-to-the-hand" target="_blank" rel="noopener noreferrer">
+          <img src="images/talktothehand.png" alt="TalkToTheHand project screenshot" />
+        </a>
+        <a href="https://github.com/shehrina/NumberNinjas" target="_blank" rel="noopener noreferrer">
+          <img src="images/nummm (1).png" alt="NumberNinjas project screenshot" />
+        </a>
+      </div>
+      <button class="carousel-arrow carousel-arrow-next" type="button" aria-label="Show next projects">›</button>
     </div>
   </section>
 
@@ -181,6 +185,40 @@
     <p class="signoff">thanks for coming by, and have an amazing day ^v^</p>
   </section>
 
+  <script>
+    (function () {
+      const carousel = document.querySelector('.home-portfolio .portfolio-grid');
+      const previous = document.querySelector('.carousel-arrow-prev');
+      const next = document.querySelector('.carousel-arrow-next');
+      if (!carousel || !previous || !next) return;
+
+      function updateArrows() {
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+        previous.disabled = carousel.scrollLeft <= 2;
+        next.disabled = carousel.scrollLeft >= maxScroll - 2;
+      }
+
+      function moveCarousel(direction) {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        carousel.scrollBy({
+          left: direction * carousel.clientWidth * 0.8,
+          behavior: reduceMotion ? 'auto' : 'smooth'
+        });
+      }
+
+      previous.addEventListener('click', function () {
+        moveCarousel(-1);
+      });
+
+      next.addEventListener('click', function () {
+        moveCarousel(1);
+      });
+
+      carousel.addEventListener('scroll', updateArrows, { passive: true });
+      window.addEventListener('resize', updateArrows);
+      updateArrows();
+    })();
+  </script>
   <script>
     (function () {
       const nav = document.querySelector('.landing-nav');
