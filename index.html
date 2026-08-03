@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>shehrina hossain</title>
   <link rel="icon" href="images/luma-favicon.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="home-page">
@@ -248,11 +249,14 @@
       if (!trigger) return;
 
       const colors = ['#ffd6e7', '#cfe5ff', '#e4d6ff', '#d8f3dc'];
-      const confettiSound = new Audio('audio/confetti.wav');
-      confettiSound.preload = 'none';
-      confettiSound.volume = 0.65;
+      let confettiSound = null;
 
       trigger.addEventListener('click', function (event) {
+        if (!confettiSound) {
+          confettiSound = new Audio('audio/confetti.wav');
+          confettiSound.volume = 0.65;
+        }
+
         confettiSound.pause();
         confettiSound.currentTime = 0;
         confettiSound.play().catch(function () {
@@ -296,32 +300,30 @@
       const cat = document.querySelector('.cat-hotspot');
       if (!cat) return;
 
-      const meows = [
-        new Audio('audio/cat-attention.wav'),
-        new Audio('audio/cat-sweet.wav'),
-        new Audio('audio/cat-angry.wav')
+      const meowSources = [
+        'audio/cat-attention.wav',
+        'audio/cat-sweet.wav',
+        'audio/cat-angry.wav'
       ];
       let lastMeow = -1;
-
-      meows.forEach(function (sound) {
-        sound.preload = 'none';
-        sound.volume = 0.7;
-      });
+      let activeMeow = null;
 
       function meow() {
         let nextMeow;
 
         do {
-          nextMeow = Math.floor(Math.random() * meows.length);
+          nextMeow = Math.floor(Math.random() * meowSources.length);
         } while (nextMeow === lastMeow);
 
-        meows.forEach(function (sound) {
-          sound.pause();
-          sound.currentTime = 0;
-        });
+        if (activeMeow) {
+          activeMeow.pause();
+          activeMeow.currentTime = 0;
+        }
 
         lastMeow = nextMeow;
-        meows[nextMeow].play().catch(function () {
+        activeMeow = new Audio(meowSources[nextMeow]);
+        activeMeow.volume = 0.7;
+        activeMeow.play().catch(function () {
           // Some browsers may block audio until the page receives interaction.
         });
       }
