@@ -106,6 +106,23 @@ body {
   animation: aura-drift-four 24s ease-in-out infinite alternate;
 }
 
+/* Large animated blurs are expensive to paint on mobile GPUs. Keep the same
+   pastel aura there using static gradients that render immediately. */
+@media (max-width: 768px), (pointer: coarse) {
+  .aura-background {
+    background:
+      radial-gradient(circle at 8% 10%, rgba(255, 214, 231, 0.78) 0 14rem, transparent 27rem),
+      radial-gradient(circle at 94% 38%, rgba(207, 229, 255, 0.78) 0 15rem, transparent 29rem),
+      radial-gradient(circle at 42% 78%, rgba(228, 214, 255, 0.7) 0 13rem, transparent 27rem),
+      radial-gradient(circle at 82% 88%, rgba(216, 243, 220, 0.72) 0 12rem, transparent 25rem),
+      #fffbfd;
+  }
+
+  .aura-blob {
+    display: none;
+  }
+}
+
 @keyframes aura-drift-one {
   to { transform: translate(16vw, 12vh) scale(1.12); }
 }
@@ -477,13 +494,9 @@ nav ul li a {
   display: block;
   width: 2.75rem;
   height: 2.75rem;
-  padding: 0.3rem;
   box-sizing: border-box;
   object-fit: contain;
-  border: 1px solid rgba(92, 64, 51, 0.1);
   border-radius: 0.7rem;
-  background: rgba(255, 255, 255, 0.58);
-  box-shadow: 0 0.25rem 0.75rem rgba(92, 64, 51, 0.08);
 }
 
 .experience-logo-link {
